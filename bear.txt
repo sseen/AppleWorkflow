@@ -1,0 +1,12 @@
+tell application "System Events" to tell process "Bear"
+	set frontmost to true
+	set o to name of every menu item of menu 1 of menu bar item "文件" of menu bar 1
+	
+	tell menu bar item "文件" of menu bar 1
+		click
+		click menu item "备份笔记..." of menu 1
+	end tell
+	
+	delay 2
+	click button "导出笔记" of window 1
+end tell
